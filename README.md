@@ -2,12 +2,13 @@
 
 ## Table of Contents  
 1. [Introduction](#introduction)  
-2. [Features](#features)  
+2. [Live Demo](#live-demo)  
 3. [Setup Instructions](#setup-instructions)  
-4. [Project Structure](#project-structure)  
-5. [Usage](#usage)  
-6. [Technologies Used](#technologies-used)  
-7. [Future Improvements](#future-improvements)  
+4. [Features](#features) 
+5. [Project Structure](#project-structure)  
+6. [Usage](#usage)  
+7. [Technologies Used](#technologies-used)  
+8. [Future Improvements](#future-improvements)  
 
 ---
 
@@ -20,6 +21,13 @@ The **BooksVendor** project is a web-based application, developed as part of an 
 
 ---
 
+
+## Live Demo 
+
+To consult the live demo of this project, please visit [my youtube video](https://openai.com).
+
+---
+
 ## Setup Instructions  
 
 1. **Clone the Repository**:  
@@ -28,16 +36,37 @@ The **BooksVendor** project is a web-based application, developed as part of an 
     cd BooksVendor  
     ```  
 
-2. **Database Setup**:  
+2. **Dependencies installation**: 
+    - To install the necessary tools, run these commands, they will install you **php**, **php-pgsql** (for php pdo) and **postgresql**:
+    ```bash
+    sudo apt update
+    sudo apt upgrade
+    sudo apt install php8.1-cli
+    sudo apt install php-pgsql
+    sudo apt install postgresql postgresql-contrib
+    ```
+
+3. **Database Setup**:  
+    - To created the necessary tables for this project, please run the following commands:
+    ```bash
+    sudo -u postgres psql -d livres -f livres.sql
+    sudo -u postgres psql -d livres -f clients.sql
+    sudo -u postgres psql -d livres -f inscription.sql
+    ```
+    - If you get prompted with the error "permission denied", please do these commands before executing the previous ones:
+    ```bash
+    cp /REPLACE/THIS/WITH/ABSOLUTE/PATH/BooksVendor/livres.sql /tmp/
+    cp /REPLACE/THIS/WITH/ABSOLUTE/PATH/BooksVendor/clients.sql /tmp/
+    cp /REPLACE/THIS/WITH/ABSOLUTE/PATH/BooksVendor/inscription.sql /tmp/
+    ```
     - The database settings have been modified to match the school's desired coordinates.
 
-3. **Configure PHP**:  
-    - Install PHP and enable PDO for PostgreSQL.  
-    - Update database connection details in the PHP files.  
-
 4. **Run the Application**:  
-    - Place the project files in your web server's root directory (e.g., `htdocs` for XAMPP).  
-    - Start the server and access the application via `http://localhost/BooksVendor`.  
+    - Simply, execute this command:
+    ```bash
+    php -S localhost:8000
+    ``` 
+    - Then, in your browser, open "localhost:8000/"
 
 ---
 
@@ -66,14 +95,25 @@ The **BooksVendor** project is a web-based application, developed as part of an 
 ## Project Structure  
 
 ```plaintext  
-BooksVendor/  
-├── index.php               # Main entry point  
-├── css/                    # Stylesheets  
-├── js/                     # JavaScript files  
-├── php/                    # PHP scripts for backend logic  
-├── sql/                    # SQL scripts for database setup  
-├── templates/              # HTML templates  
-└── README.md               # Project documentation  
+├── README.md
+├── ajouter_panier.php
+├── clients.sql
+├── commander.php
+├── compteur.txt
+├── consulter_panier.php
+├── counter.php
+├── index.php
+├── inscription.php
+├── inscription.sql
+├── livres.sql
+├── recherche_auteurs.php
+├── recherche_ouvrages_auteur.php
+├── recherche_ouvrages_titre.php
+├── requete.php
+├── script.js
+├── style.css
+├── testing_queries.sql
+└── vider_panier.php
 ```  
 
 ---
