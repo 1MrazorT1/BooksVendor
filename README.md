@@ -32,7 +32,7 @@ To consult the live demo of this project, please visit [my youtube video](https:
 
 1. **Clone the Repository**:  
     ```bash  
-    git clone <repository-url>  
+    git clone git@github.com:1MrazorT1/BooksVendor.git  
     cd BooksVendor  
     ```  
 
