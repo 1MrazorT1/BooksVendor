@@ -5,11 +5,11 @@ if (!isset($_GET['debnom'])) {
     exit;
 }
 $debnom = $_GET['debnom'];
-$host   = 'localhost';
-$port   = '1234';
-$dbname = 'livres';
-$user   = 'postgres';
-$pass   = 'BokuBoku123';
+$host   = 'postgres';
+$port   = '5432';
+$dbname = 'db';
+$user   = 'nome';
+$pass   = 'ensicaen';
 try {
     $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
     $pdo = new PDO($dsn, $user, $pass);
