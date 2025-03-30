@@ -24,7 +24,7 @@ The **BooksVendor** project is a web-based application, developed as part of an 
 
 ## Live Demo 
 
-To consult the live demo of this project, please visit [my youtube video](https://openai.com).
+To consult the live demo of this project, please visit [my youtube video](https://youtu.be/pX-tCmC97jw).
 
 ---
 
@@ -49,9 +49,9 @@ To consult the live demo of this project, please visit [my youtube video](https:
 3. **Database Setup**:  
     - To created the necessary tables for this project, please run the following commands:
     ```bash
-    sudo -u postgres psql -d livres -f livres.sql
-    sudo -u postgres psql -d livres -f clients.sql
-    sudo -u postgres psql -d livres -f inscription.sql
+    sudo -u postgres psql -d db -f livres.sql
+    sudo -u postgres psql -d db -f clients.sql
+    sudo -u postgres psql -d db -f inscription.sql
     ```
     - If you get prompted with the error "permission denied", please do these commands before executing the previous ones:
     ```bash
